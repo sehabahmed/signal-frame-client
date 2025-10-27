@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { ThemeSwitch } from "../components/ui/theme-switch";
+import { Laptop, Moon, Sun } from "lucide-react";
 
 export default function Home() {
   return (
@@ -12,6 +14,18 @@ export default function Home() {
           height={20}
           priority
         />
+
+        <ThemeSwitch
+          variant="icon-click"
+          modes={["light", "dark", "system"]}
+          icons={[
+            <Sun key="sun-icon" size={16} />,
+            <Moon key="moon-icon" size={16} />,
+            <Laptop key="laptop-icon" size={16} />,
+          ]}
+          showInactiveIcons="all"
+        />
+
         <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             To get started, edit the page.tsx file.
