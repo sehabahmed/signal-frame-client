@@ -2,11 +2,13 @@ import Image from "next/image";
 import { ThemeSwitch } from "../components/ui/theme-switch";
 import { Laptop, Moon, Sun } from "lucide-react";
 import Navbar from "../components/ui/navbar";
+import ResponsiveNavbar from "../components/ui/ResponsiveNavbar";
 
 export default function Home() {
   return (
     <>
     <Navbar />
+    <ResponsiveNavbar />
       <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
         <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
           <Image
