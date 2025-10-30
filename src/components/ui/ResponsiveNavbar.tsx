@@ -27,7 +27,7 @@ const ResponsiveNavbar = () => {
   const [megaMenuSubItemsOpen, setMegaMenuSubItemsOpen] = useState("");
 
   return (
-    <nav className="flex items-center justify-between w-full relative">
+    <nav className="flex items-center justify-between w-full bg-background-95 backdrop-blur-sm fixed">
       {/* logo */}
       <img
         src="https://i.ibb.co/0BZfPq6/darklogo.png"
