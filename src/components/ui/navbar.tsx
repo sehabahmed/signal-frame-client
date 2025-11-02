@@ -30,6 +30,8 @@ const Navbar = () => {
         src="https://i.ibb.co/0BZfPq6/darklogo.png"
         alt="logo"
         className="w-[55px]"
+        width={55}
+        height={55}
       />
 
       {/* nav links */}
@@ -56,6 +58,8 @@ const Navbar = () => {
               src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?t=st=1724605498~exp=1724609098~hmac=7f6fc106bae2c17b0c93af1b2e5483d9d8368f3e51284aaec7c7d50590d2bae5&w=740"
               alt="avatar"
               className="w-[35px] h-[35px] rounded-full object-cover"
+              width={35}
+              height={35}
             />
             <div className="w-2.5 h-2.5 rounded-full bg-green-500 absolute bottom-0 right-0 border-2 border-white"></div>
           </div>
