@@ -4,7 +4,7 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { TbLogout2 } from "react-icons/tb";
 import { CiMenuFries } from "react-icons/ci";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
-import { AiOutlineFire } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
 import { BiSupport } from "react-icons/bi";
 import { FiUser } from "react-icons/fi";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -13,6 +13,7 @@ import { Laptop, Moon, Sun } from "lucide-react";
 import Image from "next/image";
 import { MorphyButtonLeft } from "./morphy-button-left";
 import { MorphyButtonRight } from "./morphy-button-right";
+import Link from "next/link";
 
 const Navbar = () => {
   const [accountMenuOpen, setAccountMenuOpen] = useState(false);
@@ -34,10 +35,12 @@ const Navbar = () => {
 
         {/* nav links */}
         <ul className="items-center gap-5 text-[1rem] text-[#424242] md:flex hidden">
-          <li className="flex items-center dark:text-[#abc2d3] hover:text-[#3B9DF8] group gap-[5px] cursor-pointer">
-            <AiOutlineFire className="text-[1.1rem] group-hover:text-[#3B9DF8] dark:text-[#abc2d3] text-gray-600" />
-            Features
-          </li>
+          <Link href="/">
+            <li className="flex items-center dark:text-[#abc2d3] hover:text-[#3B9DF8] group gap-[5px] cursor-pointer">
+              <AiOutlineHome className="text-[1.1rem] group-hover:text-[#3B9DF8] dark:text-[#abc2d3] text-gray-600" />
+              Home
+            </li>
+          </Link>
           <li className="flex items-center dark:text-[#abc2d3] hover:text-[#3B9DF8] group gap-[5px] cursor-pointer">
             <BiSupport className="text-[1.1rem] group-hover:text-[#3B9DF8] dark:text-[#abc2d3] text-gray-600" />
             Support
@@ -207,7 +210,7 @@ const Navbar = () => {
             </div>
 
             <li className="hover:text-[#3B9DF8] dark:text-[#abc2d3] transition-all duration-500 cursor-poin ter capitalize">
-              Features
+              Home
             </li>
             <li className="hover:text-[#3B9DF8] dark:text-[#abc2d3] transition-all duration-500 cursor-pointer capitalize">
               Support
