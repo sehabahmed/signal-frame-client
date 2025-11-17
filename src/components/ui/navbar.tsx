@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { TbLogout2 } from "react-icons/tb";
 import { CiMenuFries } from "react-icons/ci";
@@ -25,13 +25,15 @@ const Navbar = () => {
     <nav className="flex items-center justify-between w-full bg-background-95 backdrop-blur-sm fixed z-50">
       <div className="flex items-center justify-between w-[95%] mx-auto py-3">
         {/* logo */}
-        <Image
+        <Link href='/'>
+          <Image
           src="https://i.ibb.co/0BZfPq6/darklogo.png"
           alt="logo"
           className="w-[55px]"
           width={55}
           height={55}
         />
+        </Link>
 
         {/* nav links */}
         <ul className="items-center gap-5 text-[1rem] text-[#424242] md:flex hidden">
@@ -49,7 +51,11 @@ const Navbar = () => {
 
         {/* Login & sign up button */}
         <div className="flex items-center gap-4">
-          <MorphyButtonLeft className="cursor-pointer">Login</MorphyButtonLeft>
+          <Link href="/login">
+            <MorphyButtonLeft className="cursor-pointer">
+              Login
+            </MorphyButtonLeft>
+          </Link>
           <MorphyButtonRight className="cursor-pointer">
             Sign up
           </MorphyButtonRight>
